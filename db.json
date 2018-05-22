@@ -10,5 +10,11 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "claims": [
+    {"id": "94853434", "System":"MPI_INTERNAL"},
+    {"id": "454545", "System":"MPI_INTERNAL"},
+    {"id": "78756443", "System":"MPI_CLAIM_ID"},
+    {"id": "23343454545", "System":"VIANT_INTERNAL"},
+  ]
 }
