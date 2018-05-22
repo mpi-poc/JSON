@@ -1,22 +1,4 @@
-{
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "claims": [
-    {"id": "94853434", "System":"MPI_INTERNAL"},
-    {"id": "454545", "System":"MPI_INTERNAL"},
-    {"id": "78756443", "System":"MPI_CLAIM_ID"},
-    {"id": "23343454545", "System":"VIANT_INTERNAL"}
-  ],
+
   {
   "S:Envelope": {
     "-xmlns:env": "http://schemas.xmlsoap.org/soap/envelope/",
@@ -460,4 +442,4 @@
     }
   }
 }
-}
+
