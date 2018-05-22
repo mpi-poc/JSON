@@ -1,445 +1,485 @@
+{
+	"posts": [{
+			"id": 1,
+			"title": "Post 1"
+		},
+		{
+			"id": 2,
+			"title": "Post 2"
+		},
+		{
+			"id": 3,
+			"title": "Post 3"
+		}
+	],
+	"comments": [{
+			"id": 1,
+			"body": "some comment",
+			"postId": 1
+		},
+		{
+			"id": 2,
+			"body": "some comment",
+			"postId": 1
+		}
+	],
+	"profile": {
+		"name": "typicode"
+	},
+	"claims": [{
+			"id": "94853434",
+			"System": "MPI_INTERNAL"
+		},
+		{
+			"id": "454545",
+			"System": "MPI_INTERNAL"
+		},
+		{
+			"id": "78756443",
+			"System": "MPI_CLAIM_ID"
+		},
+		{
+			"id": "23343454545",
+			"System": "VIANT_INTERNAL"
+		}
+	],
 
-  {
-  "S:Envelope": {
-    "-xmlns:env": "http://schemas.xmlsoap.org/soap/envelope/",
-    "-xmlns:S": "http://schemas.xmlsoap.org/soap/envelope/",
-    "S:Body": {
-      "ns0:ReadUserResponse": {
-        "-xmlns:ns0": "http://www.multiplan.com/service/Identity",
-        "-xmlns:ns11": "http://www.multiplan.com/xmlschema/status",
-        "-xmlns:ns5": "http://www.multiplan.com/xmlschema/identity",
-        "-xmlns:ns10": "http://www.multiplan.com/xmlschema/searchIdentity",
-        "-xmlns:ns12": "http://www.multiplan.com/xmlschema/system/lov",
-        "ns5:UserList": {
-          "ns5:User": {
-            "ns5:UserType": {
-              "ns5:Person": {
-                "ns5:Name": {
-                  "ns5:LastName": "Brenes",
-                  "ns5:FirstName": "Roberto",
-                  "ns5:Prefix": "Dr."
-                }
-              }
-            },
-            "ns5:UserClass": {
-              "ns5:Internal": {
-                "ns5:HomeOffice": {
-                  "ns5:LocationId": "4028d32b282bb18001282bb2f313004a",
-                  "ns5:LocationCode": "NY-N",
-                  "ns5:LocationName": "New York, NY",
-                  "ns5:LocationDescription": "New York, NY"
-                },
-                "ns5:PhysicalLocation": {
-                  "ns5:LocationId": "4028d32b282bb18001282bb2f313004a",
-                  "ns5:LocationCode": "NY-N",
-                  "ns5:LocationName": "New York, NY",
-                  "ns5:LocationDescription": "New York, NY"
-                },
-                "ns5:Department": {
-                  "ns5:DepartmentCode": "IT",
-                  "ns5:DepartmentName": "Information Technology"
-                },
-                "ns5:ReportsTo": {
-                  "ns5:ReportsToUserID": "faisal.farooqui",
-                  "ns5:ReportsToLastName": "Farooqui",
-                  "ns5:ReportsToFirstName": "Faisal",
-                  "ns5:IsValidReportsToIndicator": "true"
-                },
-                "ns5:SubClass": "MultiPlan"
-              }
-            },
-            "ns5:Organization": {
-              "ns5:OrganizationId": "100",
-              "ns5:OrganizationCode": "MPI",
-              "ns5:OrganizationName": "MultiPlan",
-              "ns5:OrganizationType": {
-                "ns5:OrganizationTypeCode": "MPI",
-                "ns5:OrganizationTypeName": "ORGANIZATION TYPE NAME"
-              }
-            },
-            "ns5:ContactDetails": {
-              "ns5:PhoneList": {
-                "ns5:Phone": {
-                  "-doDelete": "false",
-                  "ns5:PhoneId": "4028d32c2854ab9701285593c4b8001f",
-                  "ns5:IsPrimary": "true",
-                  "ns5:PhoneType": "Primary",
-                  "ns5:PhoneNumber": "2125398192"
-                }
-              },
-              "ns5:EmailList": {
-                "ns5:Email": {
-                  "-doDelete": "false",
-                  "ns5:EmailId": "4028d32b285136c701285152cc3f1e70",
-                  "ns5:IsPrimary": "true",
-                  "ns5:EmailType": "Primary",
-                  "ns5:EmailAddress": "roberto.brenes@multiplan.com",
-                  "ns5:IsAdviceSheet": "false"
-                }
-              }
-            },
-            "ns5:PrimaryIdentity": {
-              "ns5:IdentityIdentifier": {
-                "ns5:UserID": "roberto.brenes",
-                "ns5:SysKey": "4028d32b285136c701285152cc3f1e6c"
-              },
-              "ns5:IdentityStatus": {
-                "ns5:StatusCode": "ACT",
-                "ns5:StatusName": "Active",
-                "ns5:StatusDescription": "The user is active in the system",
-                "ns5:IsLocked": "false",
-                "ns5:PasswordStatus": "CANNOTCHANGE"
-              },
-              "ns5:GroupList": {
-                "ns5:Group": {
-                  "ns5:GroupCode": "DEPTIT",
-                  "ns5:Name": "Information Technology",
-                  "ns5:Description": "Information Technology",
-                  "ns5:RemovableIndicator": "true",
-                  "ns5:GroupChildren": {
-                    "ns5:Group": {
-                      "ns5:GroupCode": "DEPTITMEM",
-                      "ns5:Name": "Information Technology Department",
-                      "ns5:Description": "Information Technology Department",
-                      "ns5:RemovableIndicator": "false"
-                    }
-                  }
-                }
-              },
-              "ns5:RoleList": {
-                "ns5:Role": [
-                  {
-                    "ns5:RoleCode": "ACCTMGMT",
-                    "ns5:Name": "Account Management",
-                    "ns5:Description": "Parent role for Account Management",
-                    "ns5:RemovableIndicator": "true",
-                    "ns5:RoleChildren": {
-                      "ns5:Role": {
-                        "ns5:RoleCode": "ACCTMGMTSTAFF",
-                        "ns5:Name": "Account Management Staff",
-                        "ns5:Description": "Account Management Staff",
-                        "ns5:RemovableIndicator": "true"
-                      }
-                    }
-                  },
-                  {
-                    "ns5:RoleCode": "INTCEP",
-                    "ns5:Name": "Claim Entry Portal",
-                    "ns5:Description": "Parent role for Claim Entry Portal - Internal",
-                    "ns5:RemovableIndicator": "true",
-                    "ns5:RoleChildren": {
-                      "ns5:Role": [
-                        {
-                          "ns5:RoleCode": "INTCEPADJCAN",
-                          "ns5:Name": "Adjust/Cancel",
-                          "ns5:Description": "Parent role for Claim Entry Adjust/Cancel functionality",
-                          "ns5:RemovableIndicator": "true",
-                          "ns5:RoleChildren": {
-                            "ns5:Role": [
-                              {
-                                "ns5:RoleCode": "INTADJMRA",
-                                "ns5:Name": "Adjust MRA",
-                                "ns5:Description": "Claim Entry/Adjustment MRA (IPR/OPR, Data iSight)",
-                                "ns5:RemovableIndicator": "true"
-                              },
-                              {
-                                "ns5:RoleCode": "INTADJSTD",
-                                "ns5:Name": "Adjust Standard",
-                                "ns5:Description": "Claim Entry/Adjustment Standard",
-                                "ns5:RemovableIndicator": "true"
-                              },
-                              {
-                                "ns5:RoleCode": "INTCANMRA",
-                                "ns5:Name": "Cancel MRA",
-                                "ns5:Description": "Claim Cancellation MRA",
-                                "ns5:RemovableIndicator": "true"
-                              },
-                              {
-                                "ns5:RoleCode": "INTCANSTD",
-                                "ns5:Name": "Cancel Standard",
-                                "ns5:Description": "Claim Cancellation Standard",
-                                "ns5:RemovableIndicator": "true"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "ns5:RoleCode": "INTCE",
-                          "ns5:Name": "Claim Entry",
-                          "ns5:Description": "Claim Entry Portal role to enter claims.",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "INTCECLONE",
-                          "ns5:Name": "Clone Entire Claim",
-                          "ns5:Description": "Ability to utilize the Claim Clone feature in Claim Entry Portal.",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "INTOPNCLMADM",
-                          "ns5:Name": "Open Claims Admin All Claim Types",
-                          "ns5:Description": "HIGHLY SENSITIVE SUMMARY VIEW. Summary and Detail Views of all claims for a given Client code, regardless of submission type (manual, EDI, etc.) This user must have access to the Client code",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "INTOPNCLMSM",
-                          "ns5:Name": "Open Claims Supervisor Manual Claims Only",
-                          "ns5:Description": "Detail View only, of only those claims manually entered by anyone for a given Client code that this user has access",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "INTCEPICKLIST",
-                          "ns5:Name": "Provider Pick List",
-                          "ns5:Description": "Ability to override the provider matching to force a claim to match to a particular provider.",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "INTREPADMACLM",
-                          "ns5:Name": "Report Admin All Claim Types",
-                          "ns5:Description": "All claims for a given Client code, regardless of submission type (manual, EDI, etc.) This user must have access to the Client code",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "INTREPSMCLM",
-                          "ns5:Name": "Report Supervisor Manual Claims Only",
-                          "ns5:Description": "Only those claims manually entered by anyone for a given Client code that this user has access",
-                          "ns5:RemovableIndicator": "true"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "ns5:RoleCode": "CLMINQ",
-                    "ns5:Name": "Claim Inquiry",
-                    "ns5:Description": "Parent role for Claim Inquiry",
-                    "ns5:RemovableIndicator": "true",
-                    "ns5:RoleChildren": {
-                      "ns5:Role": [
-                        {
-                          "ns5:RoleCode": "CLMINQADMIN",
-                          "ns5:Name": "Claim Search Query Administrator",
-                          "ns5:Description": "Claim Search Query Administrator",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "CLMINQUSER",
-                          "ns5:Name": "Claim Search Query User",
-                          "ns5:Description": "Claim Search Query User",
-                          "ns5:RemovableIndicator": "true"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "ns5:RoleCode": "EDITOOLS",
-                    "ns5:Name": "EDI Tools",
-                    "ns5:Description": "Parent role for all EDI Tools roles",
-                    "ns5:RemovableIndicator": "true",
-                    "ns5:RoleChildren": {
-                      "ns5:Role": {
-                        "ns5:RoleCode": "SUPPETU",
-                        "ns5:Name": "EDI Toolbox User",
-                        "ns5:Description": "EDI Toolbox User",
-                        "ns5:RemovableIndicator": "true"
-                      }
-                    }
-                  },
-                  {
-                    "ns5:RoleCode": "MPF",
-                    "ns5:Name": "MP3 Facility",
-                    "ns5:Description": "MP3 Facility",
-                    "ns5:RemovableIndicator": "true",
-                    "ns5:RoleChildren": {
-                      "ns5:Role": [
-                        {
-                          "ns5:RoleCode": "MPFBE3",
-                          "ns5:Name": "MP3  Facility Basic Edit 3",
-                          "ns5:Description": "MP3  Facility Basic Edit 3",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "MPFM2",
-                          "ns5:Name": "MP3  Facility Manager 2",
-                          "ns5:Description": "MP3  Facility Manager 2",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "MPFN",
-                          "ns5:Name": "MP3 Facility Negotiator",
-                          "ns5:Description": "MP3 Facility Negotiator",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "MPFPR",
-                          "ns5:Name": "MP3 Facility Products and Rates Administrator",
-                          "ns5:Description": "MP3 Facility Products and Rates Administrator",
-                          "ns5:RemovableIndicator": "true"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "ns5:RoleCode": "PRAC",
-                    "ns5:Name": "MP3 Practitioner",
-                    "ns5:Description": "Parent role for all MP3 Practitioner roles",
-                    "ns5:RemovableIndicator": "true",
-                    "ns5:RoleChildren": {
-                      "ns5:Role": {
-                        "ns5:RoleCode": "PRAC_IT_USER",
-                        "ns5:Name": "IT User",
-                        "ns5:Description": "IT User Role",
-                        "ns5:RemovableIndicator": "true"
-                      }
-                    }
-                  },
-                  {
-                    "ns5:RoleCode": "NETDEV",
-                    "ns5:Name": "Network Development",
-                    "ns5:Description": "Parent role for Network Development",
-                    "ns5:RemovableIndicator": "true",
-                    "ns5:RoleChildren": {
-                      "ns5:Role": {
-                        "ns5:RoleCode": "NETDEVSTAFF",
-                        "ns5:Name": "Network Development Staff",
-                        "ns5:Description": "Network Development Staff",
-                        "ns5:RemovableIndicator": "true"
-                      }
-                    }
-                  },
-                  {
-                    "ns5:RoleCode": "REPRICE",
-                    "ns5:Name": "Repricing",
-                    "ns5:Description": "Repricing",
-                    "ns5:RemovableIndicator": "true",
-                    "ns5:RoleChildren": {
-                      "ns5:Role": {
-                        "ns5:RoleCode": "REPRICEACESS",
-                        "ns5:Name": "EnterPrice Access",
-                        "ns5:Description": "EnterPrice Access",
-                        "ns5:RemovableIndicator": "true"
-                      }
-                    }
-                  },
-                  {
-                    "ns5:RoleCode": "REQ",
-                    "ns5:Name": "Reqlog Users",
-                    "ns5:Description": "Reqlog Users",
-                    "ns5:RemovableIndicator": "true",
-                    "ns5:RoleChildren": {
-                      "ns5:Role": {
-                        "ns5:RoleCode": "REQPO",
-                        "ns5:Name": "Practitioner Operations",
-                        "ns5:Description": "Practitioner Operations",
-                        "ns5:RemovableIndicator": "true"
-                      }
-                    }
-                  },
-                  {
-                    "ns5:RoleCode": "CSIT",
-                    "ns5:Name": "Service Tracking",
-                    "ns5:Description": "Service Tracking",
-                    "ns5:RemovableIndicator": "true",
-                    "ns5:RoleChildren": {
-                      "ns5:Role": [
-                        {
-                          "ns5:RoleCode": "CSITMGR",
-                          "ns5:Name": "Management",
-                          "ns5:Description": "Management",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "CSITACCESS",
-                          "ns5:Name": "Service Tracking Access",
-                          "ns5:Description": "Service Tracking Access",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "CSITFAXADM",
-                          "ns5:Name": "Service Tracking Fax Administration",
-                          "ns5:Description": "Service Tracking Fax Administration",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "CSITFAX",
-                          "ns5:Name": "Service Tracking Fax Receptionist",
-                          "ns5:Description": "Service Tracking Fax Receptionist",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "CSITFAXSUPP",
-                          "ns5:Name": "Service Tracking Fax Troubleshooting",
-                          "ns5:Description": "Service Tracking Fax Troubleshooting",
-                          "ns5:RemovableIndicator": "true"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "ns5:RoleCode": "SUPPORT",
-                    "ns5:Name": "Support and Troubleshooting",
-                    "ns5:Description": "Support and Troubleshooting",
-                    "ns5:RemovableIndicator": "true",
-                    "ns5:RoleChildren": {
-                      "ns5:Role": [
-                        {
-                          "ns5:RoleCode": "SUPPCT",
-                          "ns5:Name": "Claim Tools",
-                          "ns5:Description": "Claim Tools",
-                          "ns5:RemovableIndicator": "true"
-                        },
-                        {
-                          "ns5:RoleCode": "SUPPPTS",
-                          "ns5:Name": "PTS Administrator",
-                          "ns5:Description": "PTS Administrator",
-                          "ns5:RemovableIndicator": "true"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            "ns5:SecondaryIdentityList": {
-              "ns5:NetworxIdentity": {
-                "ns5:IdentityIdentifier": {
-                  "ns5:UserID": "roberto.brenes",
-                  "ns5:SysKey": "4028d32b285136c701285152cc3f1e6c"
-                },
-                "ns5:IdentityStatus": {
-                  "ns5:StatusCode": "ACT",
-                  "ns5:StatusName": "Active",
-                  "ns5:StatusDescription": "The user is active in the system",
-                  "ns5:IsLocked": "false",
-                  "ns5:PasswordStatus": "CANCHANGE"
-                }
-              },
-              "ns5:GlobalManagerIdentity": {
-                "ns5:IdentityIdentifier": {
-                  "ns5:UserID": "roberto.brenes",
-                  "ns5:SysKey": "59261"
-                },
-                "ns5:IdentityStatus": {
-                  "ns5:StatusCode": "ACT",
-                  "ns5:StatusName": "Active",
-                  "ns5:StatusDescription": "The user is active in the system",
-                  "ns5:IsLocked": "false",
-                  "ns5:PasswordStatus": "CANNOTCHANGE"
-                }
-              }
-            },
-            "ns5:StartDate": "2015-10-18",
-            "ns5:LastLoginDate": "2018-04-26"
-          }
-        },
-        "ns11:RequestStatus": {
-          "Status": { "StatusCD": "C" },
-          "Advice": {
-            "AdviceCD": "P",
-            "AdviceComment": "User list has been successfully read."
-          }
-        }
-      }
-    }
-  }
+	"ReadUser": {
+		"S:Envelope": {
+			"-xmlns:env": "http://schemas.xmlsoap.org/soap/envelope/",
+			"-xmlns:S": "http://schemas.xmlsoap.org/soap/envelope/",
+			"S:Body": {
+				"ns0:ReadUserResponse": {
+					"-xmlns:ns0": "http://www.multiplan.com/service/Identity",
+					"-xmlns:ns11": "http://www.multiplan.com/xmlschema/status",
+					"-xmlns:ns5": "http://www.multiplan.com/xmlschema/identity",
+					"-xmlns:ns10": "http://www.multiplan.com/xmlschema/searchIdentity",
+					"-xmlns:ns12": "http://www.multiplan.com/xmlschema/system/lov",
+					"ns5:UserList": {
+						"ns5:User": {
+							"ns5:UserType": {
+								"ns5:Person": {
+									"ns5:Name": {
+										"ns5:LastName": "Brenes",
+										"ns5:FirstName": "Roberto",
+										"ns5:Prefix": "Dr."
+									}
+								}
+							},
+							"ns5:UserClass": {
+								"ns5:Internal": {
+									"ns5:HomeOffice": {
+										"ns5:LocationId": "4028d32b282bb18001282bb2f313004a",
+										"ns5:LocationCode": "NY-N",
+										"ns5:LocationName": "New York, NY",
+										"ns5:LocationDescription": "New York, NY"
+									},
+									"ns5:PhysicalLocation": {
+										"ns5:LocationId": "4028d32b282bb18001282bb2f313004a",
+										"ns5:LocationCode": "NY-N",
+										"ns5:LocationName": "New York, NY",
+										"ns5:LocationDescription": "New York, NY"
+									},
+									"ns5:Department": {
+										"ns5:DepartmentCode": "IT",
+										"ns5:DepartmentName": "Information Technology"
+									},
+									"ns5:ReportsTo": {
+										"ns5:ReportsToUserID": "faisal.farooqui",
+										"ns5:ReportsToLastName": "Farooqui",
+										"ns5:ReportsToFirstName": "Faisal",
+										"ns5:IsValidReportsToIndicator": "true"
+									},
+									"ns5:SubClass": "MultiPlan"
+								}
+							},
+							"ns5:Organization": {
+								"ns5:OrganizationId": "100",
+								"ns5:OrganizationCode": "MPI",
+								"ns5:OrganizationName": "MultiPlan",
+								"ns5:OrganizationType": {
+									"ns5:OrganizationTypeCode": "MPI",
+									"ns5:OrganizationTypeName": "ORGANIZATION TYPE NAME"
+								}
+							},
+							"ns5:ContactDetails": {
+								"ns5:PhoneList": {
+									"ns5:Phone": {
+										"-doDelete": "false",
+										"ns5:PhoneId": "4028d32c2854ab9701285593c4b8001f",
+										"ns5:IsPrimary": "true",
+										"ns5:PhoneType": "Primary",
+										"ns5:PhoneNumber": "2125398192"
+									}
+								},
+								"ns5:EmailList": {
+									"ns5:Email": {
+										"-doDelete": "false",
+										"ns5:EmailId": "4028d32b285136c701285152cc3f1e70",
+										"ns5:IsPrimary": "true",
+										"ns5:EmailType": "Primary",
+										"ns5:EmailAddress": "roberto.brenes@multiplan.com",
+										"ns5:IsAdviceSheet": "false"
+									}
+								}
+							},
+							"ns5:PrimaryIdentity": {
+								"ns5:IdentityIdentifier": {
+									"ns5:UserID": "roberto.brenes",
+									"ns5:SysKey": "4028d32b285136c701285152cc3f1e6c"
+								},
+								"ns5:IdentityStatus": {
+									"ns5:StatusCode": "ACT",
+									"ns5:StatusName": "Active",
+									"ns5:StatusDescription": "The user is active in the system",
+									"ns5:IsLocked": "false",
+									"ns5:PasswordStatus": "CANNOTCHANGE"
+								},
+								"ns5:GroupList": {
+									"ns5:Group": {
+										"ns5:GroupCode": "DEPTIT",
+										"ns5:Name": "Information Technology",
+										"ns5:Description": "Information Technology",
+										"ns5:RemovableIndicator": "true",
+										"ns5:GroupChildren": {
+											"ns5:Group": {
+												"ns5:GroupCode": "DEPTITMEM",
+												"ns5:Name": "Information Technology Department",
+												"ns5:Description": "Information Technology Department",
+												"ns5:RemovableIndicator": "false"
+											}
+										}
+									}
+								},
+								"ns5:RoleList": {
+									"ns5:Role": [{
+											"ns5:RoleCode": "ACCTMGMT",
+											"ns5:Name": "Account Management",
+											"ns5:Description": "Parent role for Account Management",
+											"ns5:RemovableIndicator": "true",
+											"ns5:RoleChildren": {
+												"ns5:Role": {
+													"ns5:RoleCode": "ACCTMGMTSTAFF",
+													"ns5:Name": "Account Management Staff",
+													"ns5:Description": "Account Management Staff",
+													"ns5:RemovableIndicator": "true"
+												}
+											}
+										},
+										{
+											"ns5:RoleCode": "INTCEP",
+											"ns5:Name": "Claim Entry Portal",
+											"ns5:Description": "Parent role for Claim Entry Portal - Internal",
+											"ns5:RemovableIndicator": "true",
+											"ns5:RoleChildren": {
+												"ns5:Role": [{
+														"ns5:RoleCode": "INTCEPADJCAN",
+														"ns5:Name": "Adjust/Cancel",
+														"ns5:Description": "Parent role for Claim Entry Adjust/Cancel functionality",
+														"ns5:RemovableIndicator": "true",
+														"ns5:RoleChildren": {
+															"ns5:Role": [{
+																	"ns5:RoleCode": "INTADJMRA",
+																	"ns5:Name": "Adjust MRA",
+																	"ns5:Description": "Claim Entry/Adjustment MRA (IPR/OPR, Data iSight)",
+																	"ns5:RemovableIndicator": "true"
+																},
+																{
+																	"ns5:RoleCode": "INTADJSTD",
+																	"ns5:Name": "Adjust Standard",
+																	"ns5:Description": "Claim Entry/Adjustment Standard",
+																	"ns5:RemovableIndicator": "true"
+																},
+																{
+																	"ns5:RoleCode": "INTCANMRA",
+																	"ns5:Name": "Cancel MRA",
+																	"ns5:Description": "Claim Cancellation MRA",
+																	"ns5:RemovableIndicator": "true"
+																},
+																{
+																	"ns5:RoleCode": "INTCANSTD",
+																	"ns5:Name": "Cancel Standard",
+																	"ns5:Description": "Claim Cancellation Standard",
+																	"ns5:RemovableIndicator": "true"
+																}
+															]
+														}
+													},
+													{
+														"ns5:RoleCode": "INTCE",
+														"ns5:Name": "Claim Entry",
+														"ns5:Description": "Claim Entry Portal role to enter claims.",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "INTCECLONE",
+														"ns5:Name": "Clone Entire Claim",
+														"ns5:Description": "Ability to utilize the Claim Clone feature in Claim Entry Portal.",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "INTOPNCLMADM",
+														"ns5:Name": "Open Claims Admin All Claim Types",
+														"ns5:Description": "HIGHLY SENSITIVE SUMMARY VIEW. Summary and Detail Views of all claims for a given Client code, regardless of submission type (manual, EDI, etc.) This user must have access to the Client code",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "INTOPNCLMSM",
+														"ns5:Name": "Open Claims Supervisor Manual Claims Only",
+														"ns5:Description": "Detail View only, of only those claims manually entered by anyone for a given Client code that this user has access",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "INTCEPICKLIST",
+														"ns5:Name": "Provider Pick List",
+														"ns5:Description": "Ability to override the provider matching to force a claim to match to a particular provider.",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "INTREPADMACLM",
+														"ns5:Name": "Report Admin All Claim Types",
+														"ns5:Description": "All claims for a given Client code, regardless of submission type (manual, EDI, etc.) This user must have access to the Client code",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "INTREPSMCLM",
+														"ns5:Name": "Report Supervisor Manual Claims Only",
+														"ns5:Description": "Only those claims manually entered by anyone for a given Client code that this user has access",
+														"ns5:RemovableIndicator": "true"
+													}
+												]
+											}
+										},
+										{
+											"ns5:RoleCode": "CLMINQ",
+											"ns5:Name": "Claim Inquiry",
+											"ns5:Description": "Parent role for Claim Inquiry",
+											"ns5:RemovableIndicator": "true",
+											"ns5:RoleChildren": {
+												"ns5:Role": [{
+														"ns5:RoleCode": "CLMINQADMIN",
+														"ns5:Name": "Claim Search Query Administrator",
+														"ns5:Description": "Claim Search Query Administrator",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "CLMINQUSER",
+														"ns5:Name": "Claim Search Query User",
+														"ns5:Description": "Claim Search Query User",
+														"ns5:RemovableIndicator": "true"
+													}
+												]
+											}
+										},
+										{
+											"ns5:RoleCode": "EDITOOLS",
+											"ns5:Name": "EDI Tools",
+											"ns5:Description": "Parent role for all EDI Tools roles",
+											"ns5:RemovableIndicator": "true",
+											"ns5:RoleChildren": {
+												"ns5:Role": {
+													"ns5:RoleCode": "SUPPETU",
+													"ns5:Name": "EDI Toolbox User",
+													"ns5:Description": "EDI Toolbox User",
+													"ns5:RemovableIndicator": "true"
+												}
+											}
+										},
+										{
+											"ns5:RoleCode": "MPF",
+											"ns5:Name": "MP3 Facility",
+											"ns5:Description": "MP3 Facility",
+											"ns5:RemovableIndicator": "true",
+											"ns5:RoleChildren": {
+												"ns5:Role": [{
+														"ns5:RoleCode": "MPFBE3",
+														"ns5:Name": "MP3  Facility Basic Edit 3",
+														"ns5:Description": "MP3  Facility Basic Edit 3",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "MPFM2",
+														"ns5:Name": "MP3  Facility Manager 2",
+														"ns5:Description": "MP3  Facility Manager 2",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "MPFN",
+														"ns5:Name": "MP3 Facility Negotiator",
+														"ns5:Description": "MP3 Facility Negotiator",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "MPFPR",
+														"ns5:Name": "MP3 Facility Products and Rates Administrator",
+														"ns5:Description": "MP3 Facility Products and Rates Administrator",
+														"ns5:RemovableIndicator": "true"
+													}
+												]
+											}
+										},
+										{
+											"ns5:RoleCode": "PRAC",
+											"ns5:Name": "MP3 Practitioner",
+											"ns5:Description": "Parent role for all MP3 Practitioner roles",
+											"ns5:RemovableIndicator": "true",
+											"ns5:RoleChildren": {
+												"ns5:Role": {
+													"ns5:RoleCode": "PRAC_IT_USER",
+													"ns5:Name": "IT User",
+													"ns5:Description": "IT User Role",
+													"ns5:RemovableIndicator": "true"
+												}
+											}
+										},
+										{
+											"ns5:RoleCode": "NETDEV",
+											"ns5:Name": "Network Development",
+											"ns5:Description": "Parent role for Network Development",
+											"ns5:RemovableIndicator": "true",
+											"ns5:RoleChildren": {
+												"ns5:Role": {
+													"ns5:RoleCode": "NETDEVSTAFF",
+													"ns5:Name": "Network Development Staff",
+													"ns5:Description": "Network Development Staff",
+													"ns5:RemovableIndicator": "true"
+												}
+											}
+										},
+										{
+											"ns5:RoleCode": "REPRICE",
+											"ns5:Name": "Repricing",
+											"ns5:Description": "Repricing",
+											"ns5:RemovableIndicator": "true",
+											"ns5:RoleChildren": {
+												"ns5:Role": {
+													"ns5:RoleCode": "REPRICEACESS",
+													"ns5:Name": "EnterPrice Access",
+													"ns5:Description": "EnterPrice Access",
+													"ns5:RemovableIndicator": "true"
+												}
+											}
+										},
+										{
+											"ns5:RoleCode": "REQ",
+											"ns5:Name": "Reqlog Users",
+											"ns5:Description": "Reqlog Users",
+											"ns5:RemovableIndicator": "true",
+											"ns5:RoleChildren": {
+												"ns5:Role": {
+													"ns5:RoleCode": "REQPO",
+													"ns5:Name": "Practitioner Operations",
+													"ns5:Description": "Practitioner Operations",
+													"ns5:RemovableIndicator": "true"
+												}
+											}
+										},
+										{
+											"ns5:RoleCode": "CSIT",
+											"ns5:Name": "Service Tracking",
+											"ns5:Description": "Service Tracking",
+											"ns5:RemovableIndicator": "true",
+											"ns5:RoleChildren": {
+												"ns5:Role": [{
+														"ns5:RoleCode": "CSITMGR",
+														"ns5:Name": "Management",
+														"ns5:Description": "Management",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "CSITACCESS",
+														"ns5:Name": "Service Tracking Access",
+														"ns5:Description": "Service Tracking Access",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "CSITFAXADM",
+														"ns5:Name": "Service Tracking Fax Administration",
+														"ns5:Description": "Service Tracking Fax Administration",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "CSITFAX",
+														"ns5:Name": "Service Tracking Fax Receptionist",
+														"ns5:Description": "Service Tracking Fax Receptionist",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "CSITFAXSUPP",
+														"ns5:Name": "Service Tracking Fax Troubleshooting",
+														"ns5:Description": "Service Tracking Fax Troubleshooting",
+														"ns5:RemovableIndicator": "true"
+													}
+												]
+											}
+										},
+										{
+											"ns5:RoleCode": "SUPPORT",
+											"ns5:Name": "Support and Troubleshooting",
+											"ns5:Description": "Support and Troubleshooting",
+											"ns5:RemovableIndicator": "true",
+											"ns5:RoleChildren": {
+												"ns5:Role": [{
+														"ns5:RoleCode": "SUPPCT",
+														"ns5:Name": "Claim Tools",
+														"ns5:Description": "Claim Tools",
+														"ns5:RemovableIndicator": "true"
+													},
+													{
+														"ns5:RoleCode": "SUPPPTS",
+														"ns5:Name": "PTS Administrator",
+														"ns5:Description": "PTS Administrator",
+														"ns5:RemovableIndicator": "true"
+													}
+												]
+											}
+										}
+									]
+								}
+							},
+							"ns5:SecondaryIdentityList": {
+								"ns5:NetworxIdentity": {
+									"ns5:IdentityIdentifier": {
+										"ns5:UserID": "roberto.brenes",
+										"ns5:SysKey": "4028d32b285136c701285152cc3f1e6c"
+									},
+									"ns5:IdentityStatus": {
+										"ns5:StatusCode": "ACT",
+										"ns5:StatusName": "Active",
+										"ns5:StatusDescription": "The user is active in the system",
+										"ns5:IsLocked": "false",
+										"ns5:PasswordStatus": "CANCHANGE"
+									}
+								},
+								"ns5:GlobalManagerIdentity": {
+									"ns5:IdentityIdentifier": {
+										"ns5:UserID": "roberto.brenes",
+										"ns5:SysKey": "59261"
+									},
+									"ns5:IdentityStatus": {
+										"ns5:StatusCode": "ACT",
+										"ns5:StatusName": "Active",
+										"ns5:StatusDescription": "The user is active in the system",
+										"ns5:IsLocked": "false",
+										"ns5:PasswordStatus": "CANNOTCHANGE"
+									}
+								}
+							},
+							"ns5:StartDate": "2015-10-18",
+							"ns5:LastLoginDate": "2018-04-26"
+						}
+					},
+					"ns11:RequestStatus": {
+						"Status": {
+							"StatusCD": "C"
+						},
+						"Advice": {
+							"AdviceCD": "P",
+							"AdviceComment": "User list has been successfully read."
+						}
+					}
+				}
+			}
+		}
+	}
 }
-
