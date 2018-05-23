@@ -43,7 +43,6 @@
 			"System": "VIANT_INTERNAL"
 		}
 	],
-	"AdjustmentReasons": {
           "AdjustmentReason": [
             "ASG Multiple Procedures",
             "AWP Pricing",
@@ -81,7 +80,7 @@
             "Secondary Insurance/ Medicare Indicator",
             "Stop Loss"
           ]
-        }
+        
 
 	
 }
